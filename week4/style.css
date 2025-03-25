@@ -1,46 +1,33 @@
-/* Reset mặc định của trình duyệt */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Toàn bộ trang có nền xám */
 body {
     background: #ccc;
 }
-
-/* Định dạng thanh navigation */
 nav#topmenu {
     background-color: #444;
     text-align: center;
     padding: 0;
 }
-
-/* Định dạng danh sách menu */
 nav#topmenu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
-/* Các mục menu được hiển thị theo hàng ngang */
 nav#topmenu li {
     display: inline-block;
     height: 40px;
     line-height: 40px;
     padding: 0 20px;
 }
-
-/* Định dạng liên kết trong menu */
 nav#topmenu a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
 }
-
-/* Khu vực bên dưới navigation */
 .content {
-    height: 300px;  /* Điều chỉnh chiều cao cho giống ảnh */
-    background: #999; /* Màu xám nhạt */
+    height: 300px;  
+    background: #999; 
 }
