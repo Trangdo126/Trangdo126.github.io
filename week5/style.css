@@ -1,22 +1,27 @@
-/* Định dạng thanh điều hướng */
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Thanh điều hướng */
 nav {
-    background-color: #222; /* Màu tối giống hình */
+    background-color: #222; /* Màu đen giống ảnh */
     padding: 15px 0;
     text-align: center;
 }
 
-/* Navigation bar nằm ngang */
 .navbar {
     list-style-type: none;
-    display: flex; /* Bắt buộc giúp nó nằm ngang */
-    justify-content: center; /* Căn giữa các mục */
+    display: flex;
+    justify-content: center; /* Căn giữa */
     padding: 0;
-    margin: 0;
 }
 
 .navbar li {
-    margin: 0 15px; /* Khoảng cách giữa các mục */
-    display: inline-block; /* Đảm bảo không bị xuống dòng */
+    margin: 0 15px;
 }
 
 .navbar li a {
@@ -25,9 +30,42 @@ nav {
     font-size: 16px;
     font-weight: bold;
     padding: 10px 15px;
+    display: block;
 }
 
 .navbar li a:hover {
     background-color: #444;
     border-radius: 5px;
+}
+
+/* Nội dung chính */
+.container {
+    width: 60%;
+    margin: 30px auto;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px;
+    color: #444;
+    margin-top: 5px;
+}
+
+.section-title {
+    color: #007bff; /* Màu xanh giống ảnh */
+    margin-top: 20px;
+}
+
+hr {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+ul {
+    margin-left: 20px;
 }
