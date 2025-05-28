@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newsletter Subscription</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <form id="subscriptionForm">
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" />
+      </div>
+
+      <div class="form-group">
+        <label>Subscription Type:</label>
+        <label><input type="radio" name="subscription" value="Monthly" /> Monthly</label>
+        <label><input type="radio" name="subscription" value="Yearly" /> Yearly</label>
+      </div>
+
+      <div class="form-group">
+        <label>Interests:</label>
+        <label><input type="checkbox" name="interest" value="Tech" /> Tech</label>
+        <label><input type="checkbox" name="interest" value="Health" /> Health</label>
+        <label><input type="checkbox" name="interest" value="Travel" /> Travel</label>
+      </div>
+
+      <button type="submit">Subscribe</button>
+      <div id="formMessage" class="message"></div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('subscriptionForm');
+    const messageDiv = document.getElementById('formMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const interests = [...document.querySelectorAll('input[name="interest"]:checked')];
+
+      let error = '';
+
+      if (name.length < 5) {
+        error = 'Name must be at least 5 characters long.';
+      } else if (!email.includes('@') || !email.includes('.')) {
+        error = 'Please enter a valid email address.';
+      } else if (interests.length === 0) {
+        error = 'Please select at least one interest.';
+      }
+
+      if (error) {
+        messageDiv.textContent = error;
+        messageDiv.className = 'message error';
+      } else {
+        messageDiv.textContent = 'Subscription successful!';
+        messageDiv.className = 'message success';
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
