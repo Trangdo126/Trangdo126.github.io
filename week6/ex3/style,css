@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header background */
+#header {
+  background: url('images/header.jpg') no-repeat center center;
+  background-size: cover;
+  height: 181px;
+  width: 100%;
+  position: relative;
+}
+
+/* Logo spacing */
+#logo {
+  padding: 20px 0 0 50px;
+}
+
+/* Top menu styling */
+#menu_top {
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 20px 30px;
+  padding: 10px 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-left: 30px;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  display: inline-block;
+}
+
+.menu > li > a:hover {
+  color: green;
+}
+
+/* Submenu dropdown */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #ccc;
+  min-width: 150px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.submenu li:hover {
+  background-color: #cc0;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
